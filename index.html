@@ -138,7 +138,7 @@
         <div class="stat-card"><div class="stat-num">1</div><div class="stat-label">Prix & distinctions</div></div>
       </div>
     </div>
-    <div class="about-photo"><img src="Portrait d'un jeune homme calme.png" alt="ma photo" width="500" height="700"></div>
+    <div class="about-photo"><img src="images/Portrait d'un jeune homme calme.png" alt="ma photo" width="500" height="700"></div>
   </div>
 </div>
 
@@ -158,10 +158,23 @@
       <div class="skill-desc">Interfaces modernes avec les dernières technologies web.</div>
       <div class="skill-bar-row"><span>HTML / CSS</span><span>75%</span></div>
       <div class="skill-bar-track"><div class="skill-bar-fill" data-w="75"></div></div>
-      <div class="skill-bar-row"><span>JavaScript</span><span>28%</span></div>
-      <div class="skill-bar-track"><div class="skill-bar-fill" data-w="28"></div></div>
+      <div class="skill-bar-row"><span>JavaScript</span><span>48%</span></div>
+      <div class="skill-bar-track"><div class="skill-bar-fill" data-w="48"></div></div>
       <div class="skill-bar-row"><span>logique</span><span>80%</span></div>
       <div class="skill-bar-track"><div class="skill-bar-fill" data-w="80"></div></div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-icon">⚛</div>
+      <div class="skill-name">Frameworks & Libraries</div>
+      <div class="skill-desc">Développement d'applications modernes avec les frameworks populaires.</div>
+      <div class="skill-bar-row"><span>React</span><span>55%</span></div>
+      <div class="skill-bar-track"><div class="skill-bar-fill" data-w="55"></div></div>
+      <div class="skill-bar-row"><span>Angular</span><span>60%</span></div>
+      <div class="skill-bar-track"><div class="skill-bar-fill" data-w="60"></div></div>
+      <div class="skill-bar-row"><span>TypeScript</span><span>45%</span></div>
+      <div class="skill-bar-track"><div class="skill-bar-fill" data-w="45"></div></div>
+      <div class="skill-bar-row"><span>SCSS</span><span>65%</span></div>
+      <div class="skill-bar-track"><div class="skill-bar-fill" data-w="65"></div></div>
     </div>
     <div class="skill-card">
       <div class="skill-icon"></div>
@@ -175,15 +188,19 @@
       <div class="skill-bar-track"><div class="skill-bar-fill" data-w="48"></div></div>
     </div>
     <div class="skill-card">
-      <div class="skill-icon">⚙</div>
+      <div class="skill-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-git" viewBox="0 0 16 16">
+          <path d="M15.698 7.287 8.712.302a1.03 1.03 0 0 0-1.457 0l-1.45 1.45 1.84 1.84a1.223 1.223 0 0 1 1.55 1.56l1.773 1.774a1.224 1.224 0 0 1 1.267 2.025 1.226 1.226 0 0 1-2.002-1.334L8.58 5.963v4.353a1.226 1.226 0 1 1-1.008-.036V5.887a1.226 1.226 0 0 1-.666-1.608L5.093 2.465l-4.79 4.79a1.03 1.03 0 0 0 0 1.457l6.986 6.986a1.03 1.03 0 0 0 1.457 0l6.953-6.953a1.03 1.03 0 0 0 0-1.457"/>
+        </svg>
+      </div>
       <div class="skill-name">Git & Collaboration</div>
       <div class="skill-desc">Gestion de version et travail collaboratif sur des projets.</div>
       <div class="skill-bar-row"><span>Git</span><span>65%</span></div>
       <div class="skill-bar-track"><div class="skill-bar-fill" data-w="65"></div></div>
       <div class="skill-bar-row"><span>GitHub</span><span>80%</span></div>
       <div class="skill-bar-track"><div class="skill-bar-fill" data-w="80"></div></div>
-      <div class="skill-bar-row"><span>Gestion de branches</span><span>65%</span></div>
-      <div class="skill-bar-track"><div class="skill-bar-fill" data-w="65"></div></div>
+      <div class="skill-bar-row"><span>Gestion de branches</span><span>55%</span></div>
+      <div class="skill-bar-track"><div class="skill-bar-fill" data-w="55"></div></div>
     </div>
   </div>
 </div>
@@ -211,7 +228,7 @@
 
         <div class="project-thumb-inner">
           <div class="project-big-img">
-            <img src="Portrait d'un jeune homme calme.png" alt="moi">
+            <img src="images/Portrait d'un jeune homme calme.png" alt="moi">
           </div>
         </div>
         <span class="project-badge">Mon portfolio</span>
@@ -240,7 +257,7 @@
 
         <div class="project-thumb-inner">
           <div class="project-big-img">
-            <img src="WhatsApp-Image-2022-06-26-at-11.18.10.jpeg" alt="paire de chaussure">
+            <img src="images/WhatsApp-Image-2022-06-26-at-11.18.10.jpeg" alt="paire de chaussure">
           </div>
         </div>
         <span class="project-badge">E-Commerce</span>
@@ -256,46 +273,72 @@
         </div>
       </div>
     </div>
-    <div class="project-card">
-      <div class="project-thumb">
-        <div class="project-thumb-inner">
-          <div class="project-big-img">
-            <img src="logo journal.png" alt="mon logo">
-          </div>
-        </div>
-        <span class="project-badge">Journal</span>
-      </div>
-      <div class="project-body">
-        <div class="project-title">Journal en Ligne</div>
-        <div class="project-desc">Presentation des rubriques sportives, sociales, politiques, et culturelles</div>
-        <div class="project-chips">
-
-          <span class="chip">Html5</span>
-          <span class="chip">CSS3</span>
-          <span class="chip">Javascript</span>
-        </div>
+    <div class="project-card" onclick="window.open('https://alvarotagny18-hash.github.io/Gestionnaire-universitaire/', '_blank')">
+  <div class="project-thumb">
+    <div class="project-thumb-inner">
+      <div class="project-big-img" style="background:#1a1a2e;display:flex;align-items:center;justify-content:center;">
+        <img src="images/images.jpeg" alt="GestUni">
+        <span style="font-size:3rem;">🎓</span>
       </div>
     </div>
-    <div class="project-card">
-      <div class="project-thumb">
-        <div class="project-thumb-inner">
-          <div class="project-big-img">
-              <img src="Seminaire de prière.jpeg" alt="Nyotta">
-          </div>
-        </div>
-        <span class="project-badge">Site-Web</span>
-      </div>
-      <div class="project-body">
-        <div class="project-title">Site Web du College Jesus-Marie</div>
-        <div class="project-desc">Refonte complète : logo, Presentation de l'école, ses activités et ses formations proposés.</div>
-        <div class="project-chips">
+    <span class="project-badge">Gestion</span>
+  </div>
+  <div class="project-body">
+    <div class="project-title">Gestionnaire Universitaire</div>
+    <div class="project-desc">Application de gestion universitaire — étudiants, cours, notes et emplois du temps.</div>
+    <div class="project-chips">
+      <span class="chip">Angular</span>
+      <span class="chip">TypeScript</span>
+      <span class="chip">SCSS</span>
+    </div>
+  </div>
+</div>
 
-          <span class="chip">Html5</span>
-          <span class="chip">CSS 3</span>
-          <span class="chip">JavaScript</span>
-        </div>
+<div class="project-card" onclick="window.open('restaurant/index.html')">
+  <div class="project-thumb">
+    <div class="project-thumb-inner">
+      <div class="project-big-img" style="background:#1a1a2e;display:flex;align-items:center;justify-content:center;">
+        <span style="font-size:3rem;">
+          <img src="restaurant/exterieur.jpeg" alt="rest">
+        </span>
       </div>
     </div>
+    <span class="project-badge">Restaurant</span>
+  </div>
+  <div class="project-body">
+    <div class="project-title">Site Restaurant</div>
+    <div class="project-desc">Site web d'un restaurant — menu, réservations et présentation élégante.</div>
+    <div class="project-chips">
+      <span class="chip">Html5</span>
+      <span class="chip">CSS 3</span>
+      <span class="chip">JavaScript</span>
+    </div>
+  </div>
+</div>
+
+<div class="project-card" onclick="window.open('https://alvarotagny18-hash.github.io/gestionnaire-scolaire-/', '_blank')">
+  <div class="project-thumb">
+    <div class="project-thumb-inner">
+      <div class="project-big-img" style="background:#1a1a2e;display:flex;align-items:center;justify-content:center;">
+        <span style="font-size:3rem;">
+          <img src="images/gestion-scolaire.png" alt="gestscol">
+        </span>
+      </div>
+    </div>
+    <span class="project-badge">Scolaire</span>
+  </div>
+  <div class="project-body">
+    <div class="project-title">Gestionnaire Scolaire</div>
+    <div class="project-desc">Application de gestion scolaire — élèves, classes, notes et résultats.</div>
+    <div class="project-chips">
+      <span class="chip">React</span>
+      <span class="chip">JavaScript</span>
+      <span class="chip">CSS 3</span>
+    </div>
+  </div>
+</div>
+    
+    
   </div>
 </div>
 
