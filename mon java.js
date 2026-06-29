@@ -84,3 +84,48 @@ function animateBars() {
 document.getElementById('hamburger').addEventListener('click', () => {
   document.getElementById('navLinks').classList.toggle('open');
 });
+
+async function envoyerMessage() {
+  const btn = document.getElementById('btn-send');
+  const status = document.getElementById('form-status');
+
+  const name    = document.querySelector('input[name="name"]').value.trim();
+  const email   = document.querySelector('input[name="email"]').value.trim();
+  const subject = document.querySelector('input[name="subject"]').value.trim();
+  const message = document.querySelector('textarea[name="message"]').value.trim();
+
+  if (!name || !email || !message) {
+    status.style.color = 'red';
+    status.textContent = 'Veuillez remplir tous les champs obligatoires.';
+    return;
+  }
+
+  btn.textContent = 'Envoi en cours...';
+  btn.disabled = true;
+
+  try {
+    const response = await fetch('https://formspree.io/f/xjgqoddl', {  // ←  MON_ID
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ name, email, subject, message })
+    });
+
+    if (response.ok) {
+      status.style.color = 'green';
+      status.textContent = '✅ Message envoyé ! Je vous répondrai bientôt.';
+      // Vider les champs
+      document.querySelector('input[name="name"]').value = '';
+      document.querySelector('input[name="email"]').value = '';
+      document.querySelector('input[name="subject"]').value = '';
+      document.querySelector('textarea[name="message"]').value = '';
+    } else {
+      throw new Error('Erreur serveur');
+    }
+  } catch (err) {
+    status.style.color = 'red';
+    status.textContent = '❌ Erreur lors de l\'envoi. Réessayez.';
+  }
+
+  btn.textContent = 'Envoyer le message';
+  btn.disabled = false;
+}
